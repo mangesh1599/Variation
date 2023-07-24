@@ -53,14 +53,27 @@ will be 2 as it will become 1,2,3,4.
 	}
 }
 method 2   
-  int	a[] = 	{	2, 5, 3, 1 };
-  int sum2=5*6/2;
-int sum=0;
-  for(int i=0; i<N; i++)
-  {
-    sum=sum+a[i];
-  }
+  int	a[] = 	{2, 5, 3, 1 };
+       int sum2=0;
+      int sum=0;
+     int max=0;
+     int max2=max+1;
+
+ for(int i=0; i<N; i++)
+	 {
+		 if(a[i]>max)
+		 {
+			 max=a[i];
+		 }
+	 }
+       sum2=max*max2/2/;
+ for(int i=0; i<N; i++)
+	 {
+		   sum=sum+a[i];
+	 }
+
 System.out.println(sum2-sum);
+
 
 
 
