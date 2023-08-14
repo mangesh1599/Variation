@@ -1,0 +1,52 @@
+Number of non-negative integral solutions of a + b + c = n
+Given a number n, find a number of ways we can add 3 non-negative integers so that their sum is n.
+Examples : 
+ 
+
+Input : n = 1
+Output : 3
+There are four ways to get sum 1.
+(1, 0, 0), (0, 1, 0) and (0, 0, 1)
+
+Input : n = 2
+Output : 6
+There are six ways to get sum 2.
+(2, 0, 0), (0, 2, 0), (0, 0, 2), (1, 1, 0)
+(1, 0, 1) and (0, 1, 1)
+
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		int n = 3;
+		myCode(n);
+	}
+	//EndOfMainMethod
+	private static void myCode(int n)
+	{
+
+  // Consider all triplets and increment
+   // result whenever sum of a triplet is n.
+
+		int result = 0;
+		for (int i = 0; i <= n; i++)
+		{
+			for (int j = 0; j <= n - i; j++)
+			{
+				for (int k = 0; k <= (n - i - j); k++)
+				{
+					if (i + j + k == n)
+					{
+						result++;
+					}
+				}
+			}
+		}
+		System.out.println(result);
+	}
+}
+
+
+    Output: 10
+
