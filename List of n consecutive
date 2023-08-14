@@ -1,0 +1,42 @@
+Generate a list of n consecutive composite numbers 
+Given a number n, generate a list of n composite numbers.
+Examples: 
+ 
+
+Input : 5
+Output : 122, 123, 124, 125
+
+Input : 10
+Output : 3628802, 3628803, 3628804, 3628805, 3628806, 
+         3628807, 3628808, 3628809, 3628810
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		int n = 4;
+		myCode(n);
+	}
+	//EndOfMainMethod
+	private static void myCode(int n)
+	{
+		//function to find factorial of given
+		long res = 1;
+		for (int i = 2; i <= n; i++) 
+		{
+			res *= i;
+		}
+		// Prints n consecutive numbers.
+		long fact = res*(n + 1);
+		for (int i = 2; i <= n + 1; ++i) 
+		{
+			System.out.print(fact + i + " ");
+		}
+	}
+}
+
+Output:  122 123 124 125 
+
+
+
+
