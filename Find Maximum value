@@ -1,0 +1,55 @@
+Given an array A[ ] your task is to complete the function max_val which finds the maximum value of abs(i – j) * min(arr[i], arr[j]) where i and j vary from 0 to n-1. 
+
+Input:
+N = 4
+arr[] = 3 2 1 4
+Output: 9
+Explanation:
+Here, a[0] = 3 and a[3] = 4 
+and thus result is  
+abs(0-3)*min(3,4) = 9.
+
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		int[] a= 
+		{
+			3,2,1,4
+		}
+		;
+		myCode(a,a.length);
+	}
+	//EndOfMainMethod
+	public static void myCode(int[] arr,int n) 
+	{
+		// write code here
+		int maxProduct = Integer.MIN_VALUE;
+		int currProduct;           
+		int Left = 0;
+		int right = n - 1;
+		while (Left < right) 
+		{
+			if (arr[Left] < arr[right]) 
+			{
+				currProduct = arr[Left] * (right - Left);
+				Left++;
+			}
+			else
+			{
+				currProduct = arr[right] * (right - Left);
+				right--;
+			}
+			maxProduct = Math.max(maxProduct, currProduct);
+		}
+		System.out.println(maxProduct);
+	}
+}
+
+
+Output: 9
+
+
+
+
