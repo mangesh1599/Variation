@@ -1,0 +1,35 @@
+Swap two nibbles in a byte 
+Given a number N, swap the two nibbles in it and find the resulting number. 
+Example 1:
+Input:
+N = 100
+Output:
+70
+Explanation:
+100 in binary is 01100100, 
+two nibbles are (0110) and (0100)
+If we swap the two nibbles, we get
+01000110 which is 70 in decimal
+
+
+public class MyClass 
+{
+	//StartOfMainMethod
+	public static void main(String[] args) 
+	{
+		int N = 100;
+		myCode(N);
+	}
+	//EndOfMainMethod
+	public static void myCode(int N) 
+	{
+		int right = (N & 0b00001111);
+		right= (right<<4);
+		int left = (N & 0b11110000);
+		left = (left>>4);
+		System.out.println(right+left);
+	}
+}
+
+output ; 70
+
